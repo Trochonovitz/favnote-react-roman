@@ -10,6 +10,7 @@
     "prettier",
     "prettier/react"
   ],
+
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
@@ -24,7 +25,12 @@
   },
   "plugins": ["react"],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": [
+      "error",
+      { "commonjs": true, "caseSensitive": true }
+    ]
   },
   "settings": {
     "import/resolver": {
@@ -33,5 +39,6 @@
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
-  }
+  },
+  "parser": "babel-eslint"
 }
